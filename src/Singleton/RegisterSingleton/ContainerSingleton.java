@@ -10,7 +10,7 @@ import java.util.concurrent.ConcurrentHashMap;
  * 容器式单例
  */
 public class ContainerSingleton {
-    private static ConcurrentHashMap<String, Object> container = new ConcurrentHashMap<>();
+    private static final ConcurrentHashMap<String, Object> container = new ConcurrentHashMap<>();
 
     private ContainerSingleton() {
 
