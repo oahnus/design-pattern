@@ -60,7 +60,7 @@ public class MyProxy {
         // proxyClassCache 是 WeakCache的实例，在创建时会由构造函数传入ProxyClassFactory
         // 代理类的生成由 ProxyClassFactory.apply(classLoader, interfaces)方法完成
         // apply 方法的主要工作就是通过 ProxyGenerator.generateProxyClass 动态生成代理类的字节码文件, 并写入磁盘，
-        // MARK JDK 会将代理类写入到 sun.misc.ProxyGenerator.saveGeneratedFiles 这个环境变量的值 路径下
+        // 如果设置环境变量 sun.misc.ProxyGenerator.saveGeneratedFiles = true JDK 会将生成的代理类class文件保存到  com.sun.proxy目录下
         // 之后通过classloader将代理类编译，加载， 从而得到代理类的实例
 //        return proxyClassCache.get(loader, interfaces);
 

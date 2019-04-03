@@ -64,3 +64,4 @@ fabric.properties
 .idea
 target
 SerializableSingleton.obj
+/com
